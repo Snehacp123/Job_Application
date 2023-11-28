@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- This tag tells Django to load the static template tag library. -->
+{% load static %}
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+
+    <!-- This tag links to the CSS stylesheet for the form page. -->
+    <link rel = "stylesheet" href = "{% static "css/form.css" %}">
+
+    <!-- This tag links to the font icon for the form page. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+  <div class = "font-home">
+    <a href = "{% url 'home' %}" >
+      <i class = "fa-solid fa-house"></i>
+    </a>
+    </div>
+<div class = "container">
+      
+  <div class = "box">
+   
+      <!-- display error message after submission if the form is not validate -->
+      {% if messages %}
+        {% for m in messages%}
+          <div class = "alert">
+              <span class = "closebtn" onclick = "this.parentElement.style.display = 'none';">&times;</span>
+              <p > {{ m }} </p>
+          </div>    
+        {% endfor%}          
+      {% endif%}
+      <!-- end of message -->
+    
+    <h1>Job Application Form</h1>
+    {% block bodycontent %}
+
+    {% endblock bodycontent %}
+  </div>
+</div>
+
+<!-- This tag links to the js for the form page. -->
+<script defer src="{% static "js/form.js" %}"></script>
+</body>
+</html>

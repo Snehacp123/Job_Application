@@ -1,0 +1,105 @@
+/* Page styling */
+table{
+    width: 100%;
+}
+.container{    
+    width: 100%;
+}
+/* Header styles */
+h1.heading{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/* Table container styles */
+.table-container{
+    border-collapse:collapse;
+}
+/* Table cell styles */
+.container td,.container th {
+    border: none;
+    padding: 10px;
+}
+/* table heading styles */
+.container th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: pink;
+    color: rgb(44, 44, 44);
+    font-size: 18px;   
+}
+/* Button container styles */
+.button-container{
+    text-align: center; 
+}
+/* add button styling */
+button.addbutton{  
+    text-align: center;
+    background-color: royalblue;
+    border: transparent solid 2px;
+    color: white;
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    font-family: sans-serif;
+}
+/* Table header alignment styles */
+th.th-align {
+    text-align: center;
+}
+/* Option column alignment styles */
+td.opt{
+    text-align: center;
+    font-size: 20px;
+}
+/* Font Awesome icon styles */
+.fa-solid, .fas {
+    font-weight: 900;
+    color: royalblue;
+}
+/* Odd row styling */
+tr:nth-child(odd){
+    background-color:#fff5fb;  
+}
+/* Success message styling */
+p{
+    color: #143500;
+}
+.alert {
+    padding: 1px;
+    background-color: #e6ffdb;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    text-align: center;    
+}
+  
+  /* The close button of success message*/
+.closebtn {
+    margin-left: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}  
+  /* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+/* media queries */
+@media (max-width : 500px) {
+    /* h1.heading{
+        
+        margin-left: 265px;
+    } */
+    /* .button-container {
+        text-align: center;
+        margin-left: 350px;
+    }
+     */
+
+}

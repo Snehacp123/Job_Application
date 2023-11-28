@@ -1,0 +1,136 @@
+<!-- 
+Job Application Edit Form
+
+This is the HTML page for the job application form.
+this page extends base page
+
+ -->
+ {% extends 'base.html' %}
+
+ {% block bodycontent %}
+ <!--form content starting-->
+ <form method = "POST" action = "" class = "form" id = "Form" novalidate>
+     {% csrf_token %}
+     <div class = "form-container">
+         <!-- firstname -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.first_name.label}}  
+             </div>
+             {{form.first_name}}      
+             <p class = "msg" id = "validateFirstName"></p> 
+         </div>
+         <!-- lastname -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.last_name.label}}  
+             </div>   
+             {{form.last_name}} 
+             <p class = "msg" id = "validateLastName"></p>
+         </div>
+         <!-- phonenumber -->
+         <div class = "phone-control">
+             <div class = "required">
+                 {{form.phone_no.label}} 
+             </div>
+             {{form.country_code}}
+             {{form.phone_no}}
+             <p class = "msg" id = "validatePhoneNumber"></p>     
+         </div>
+         <!-- email -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.email.label}}
+             </div>
+             {{form.email}}
+             <p class = "msg" id = "validateEmail"></p> 
+         </div>
+         <!-- date of birth -->
+         <div class = "form-control" >
+             <div class = "required">
+                 {{form.date_of_birth.label}}
+             </div>
+             {{form.date_of_birth}}
+              <p class = "msg" id = "validateDate"></p> 
+         </div>
+         <!-- gender -->
+         <div class = "form-control">
+             {{form.gender.label}}      
+             <div class = "gender">
+                 {{form.gender}}
+             </div>
+             <!-- <p class = "msg" id = "validateGender"></p> -->
+         </div>
+         <!-- qualification -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.qualification.label}}
+             </div>
+             {{form.qualification}}
+              <p class = "msg" id = "validateQualification"></p> 
+         </div>
+         <!-- job role -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.job_role.label}}
+             </div>
+             {{form.job_role}}
+              <p class = "msg" id = "validatejobrole"></p> 
+         </div>
+         <!-- experience in year -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.experience_year.label}}
+             </div>
+             {{form.experience_year}}
+              <p class = "msg" id = "validateExperienceYear"></p> 
+         </div>
+         <!-- experience in month -->
+         <div class = "form-control">
+             <div class = "required">
+                 {{form.experience_month.label}}
+             </div>
+             {{form.experience_month}} 
+             <p class = "msg" id = "validateExperienceMonth"></p>          
+         </div>
+         <!-- address -->
+         <div class = "form-control">
+             {{form.address.label}}
+             {{form.address}}
+         </div>  
+         <!--streetname-->
+         <div class = "form-control">
+             {{form.streetname.label}} 
+             {{form.streetname}}  
+         </div> 
+         <!-- city -->
+         <div class = "form-control">
+             {{form.city.label}}
+             {{form.city}}
+         </div>
+         <!-- state -->
+         <div class = "form-control">
+             {{form.state.label}}
+             {{form.state}}
+         </div>
+         <!-- country -->
+         <div class = "form-control">
+             {{form.country.label}}
+             {{form.country}}
+         </div>
+         <!-- zipcode -->
+         <div class = "form-control">
+             {{form.zipcode.label}}
+             {{form.zipcode}}
+         </div>
+ 
+     </div>
+     <br>
+ 
+     <!--add submit button  -->
+       <div class = "button-container">
+         <button type = "submit" value = "submit"><strong>Apply Now</strong>
+       </div>      
+     <!-- end submit button -->   
+ 
+ {% endblock bodycontent %}

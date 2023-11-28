@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- This tag tells Django to load the static template tag library. -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Confirmation</title>
+
+    <!-- This tag links to the CSS stylesheet for the delete confirmation page. -->
+    <link rel = "stylesheet" href="{% static "css/confirm.css" %}">
+    
+</head>
+<body>
+    <h1>Confirm Deletion</h1>
+    <p>Are you sure you want to delete {{applicant.first_name}} {{applicant.last_name}}</p>
+    <form method = "post" >
+        {% csrf_token %}
+        
+        <!-- This tag creates a submit button with the text "Yes, Delete". -->
+        <button type = "submit">Yes, Delete</button>
+
+        <!-- This tag creates a link to the home page with the text "Cancel". -->
+        <a href = "{% url 'home'%}">Cancel</a>
+    </form>
+</body>
+</html>

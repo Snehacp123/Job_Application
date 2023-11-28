@@ -1,0 +1,35 @@
+/* Body page styling */
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+/* Heading styles */
+h1{
+    background-color: #ff7f50;
+    color: #fff;
+    padding: 10px;
+
+}
+/* Confirmation box styles */
+.confirmation-box{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+/* Button styles */
+button{
+    background-color: #ff7f50;
+    color: #fff;
+    border:none;
+    padding: 10px 20px;
+    margin : 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Cancel button styles */
+button.cancel{
+    background-color: #777;
+    
+}
